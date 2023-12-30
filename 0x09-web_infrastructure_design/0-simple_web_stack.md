@@ -1,7 +1,8 @@
-                                                         # ALX Project
-                                             # 0x09. Web infrastructure design
+## ALX Project
+## 0x09. Web infrastructure design
 
-##Task 0:
+## Task 0:
+
 ![Image of a simple web stack](0-simple_web_stack.png)
 
 # What is a server ? 
