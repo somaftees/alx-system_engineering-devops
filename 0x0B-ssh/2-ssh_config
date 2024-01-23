@@ -1,5 +1,8 @@
 # Client configuration file
 Host *
-Host 3.90.80.180
-PasswordAuthentication no
-IdentityFile ~/.ssh/school
+    SendEnv LANG LC_*
+    HashKnownHosts yes
+    GSSAPIAuthentication yes
+    GSSAPIDelegateCredentials no
+    IdentityFile ~/.ssh/school
+    PasswordAuthentication no
