@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+# web-01
+
+sudo apt-get -y update
+sudo apt-get -y install nginx
+echo "Hello World!" | sudo tee /var/www/html/index.html
+
+echo "server {
+     listen      80 default_server;
+     listen      [::]:80 default_server;
+     root        /var/www/html;
+     index       index.html index.htm;
+     server_name somaftees.tech;
+}" > /etc/nginx/sites-available/default
+sudo service nginx restart
