@@ -1,0 +1,38 @@
+What Happens When You Type “https://www.google.com” and Press Enter?
+1. DNS Request (Domain Name System)
+Your browser starts by sending a DNS query to a DNS server. The purpose is to translate the human-readable domain name (like google.com) into an IP address.
+The DNS server responds with the IP address associated with google.com (e.g., 172.217.12.238).
+2. TCP/IP (Transmission Control Protocol / Internet Protocol)
+Armed with the IP address, your browser establishes a TCP/IP connection with the server at that address.
+TCP ensures reliable data transmission by breaking down the data into packets, sending them, and reassembling them at the destination.
+3. Firewall
+If you have a firewall, it checks whether the request is allowed or blocked based on predefined rules.
+Assuming all is well, the request proceeds.
+4. HTTPS/SSL (Hypertext Transfer Protocol Secure / Secure Sockets Layer)
+Since we typed https://, our browser knows to use a secure connection.
+It initiates a TLS/SSL handshake with the server.
+The server presents its SSL certificate, and the browser verifies its authenticity.
+Once the handshake is complete, an encrypted channel is established.
+5. Load Balancer
+Google’s infrastructure is massive, and they use load balancers to distribute incoming requests across multiple servers.
+The load balancer ensures that no single server gets overwhelmed.
+It routes your request to an available server.
+6. Web Server
+The selected server receives your request.
+It processes the request, which might involve fetching HTML, CSS, JavaScript files, or other resources.
+The server generates an HTML page containing the search bar, buttons, and other elements.
+7. Application Server
+Google’s application servers handle dynamic content.
+They might interact with databases, perform complex calculations, or personalize search results.
+These servers generate the actual search results page.
+8. Database
+Google’s databases store vast amounts of indexed data.
+The application server queries these databases to retrieve relevant search results.
+The databases are optimized for fast retrieval.
+9. Response to Browser
+The application server sends back the search results in HTML format.
+The browser receives the response and renders the page.
+Voilà! You see the familiar Google search page.
+Conclusion
+Next time you type https://www.google.com and press Enter, remember the intricate dance of DNS, TCP/IP, firewalls, HTTPS, load balancers, web servers, application servers, and databases that work together to bring you those search results.
+Blog post URL:[]
