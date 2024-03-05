@@ -1,8 +1,7 @@
 # Postmortem: Web Stack Outage Incident
 
 <p align="center">
-  <img src="WhatsApp Image 2024-03-05 at 17.27.48_53568fad.jpg
-"width=100% height=100% alt="..."/>
+  <img src="0x19-postmortem/WhatsApp Image 2024-03-05 at 17.27.48_53568fad.jpg"width=100% height=100% alt="..."/>
 </p>
 Issue Summary:
 Duration: February 27, 2024, 10:00 AM UTC - February 28, 2024, 2:00 PM UTC
