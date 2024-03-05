@@ -1,5 +1,8 @@
 # Postmortem: Web Stack Outage Incident
 
+<p align="center">
+  <img src=""width=100% height=100% alt="..."/>
+</p>
 Issue Summary:
 Duration: February 27, 2024, 10:00 AM UTC - February 28, 2024, 2:00 PM UTC
 Impact: The web application experienced intermittent downtime and performance degradation. Users were unable to access certain features and experienced slow response times. Approximately 30% of users were affected.
