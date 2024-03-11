@@ -1,4 +1,4 @@
-# Fix problem of high amount files opened
+# User limit
 
 exec {'replace-1':
   provider => shell,
