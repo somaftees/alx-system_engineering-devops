@@ -1,4 +1,4 @@
-# Fix problem of high amount of requests
+#  Sky is the limit, let's bring that limit higher
 
 exec {'replace':
   provider => shell,
