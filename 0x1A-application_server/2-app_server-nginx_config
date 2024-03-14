@@ -5,7 +5,7 @@ server {
         add_header X-Served-By 488143-web-01 always;
         root /var/www/html;
 
-        # inde
+        # index
         index index.html index.htm index.nginx-debian.html;
 
         # server name
