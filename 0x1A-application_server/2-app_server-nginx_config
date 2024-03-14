@@ -1,25 +1,32 @@
 server {
-    listen 80;
-    server_name 127.0.0.1 35.190.188.208;
+        listen 80 default_server;
+        listen [::]:80 default_server;
 
-    location /airbnb-onepage/ {
-        include proxy_params;
-	proxy_pass http://localhost:5000/airbnb-onepage/;
-    }
+        add_header X-Served-By 488143-web-01 always;
+        root /var/www/html;
 
-    location /airbnb-dynamic/number_odd_or_even/ {
-        rewrite /airbnb-dynamic/(.*) $1 break;
-        include proxy_params;
-	proxy_pass http://localhost:5001/;
-    }
+        # inde
+        index index.html index.htm index.nginx-debian.html;
 
-    location /api/ {
-        include proxy_params;
-	proxy_pass http://localhost:5002/api/;
-    }
+        # server name
+        server_name web-01.somaftees.tech localhost 52.91.145.192 www.somaftees.tech;
 
-    location / {
-        include proxy_params;
-	proxy_pass http://localhost:5003/;
-    }
+        error_page 404 /error_404.html;
+
+        location = /error_404.html {
+                root /var/www/html;
+                internal;
+        }
+
+        # flask app static page 
+        location = /airbnb-onepage/ {
+                proxy_pass http://127.0.0.1:5000/airbnb-onepage/;
+        }
+        location /hbnb_static/ {
+                alias /data/web_static/current/;
+        }
+
+        location /redirect_me {
+                return 301 https://www.nginx.com/blog/creating-nginx-rewrite-rules/;
+        }
 }
